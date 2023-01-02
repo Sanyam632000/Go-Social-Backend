@@ -1,0 +1,7 @@
+1) In command prompt, npm init
+2) Make index.js file (Other names are unacceptable.)
+3) Install npm packages (i.e. npm install morgan express nodemon dotenv )
+4) const express = require("express"); type statement.
+
+5) For connection with mongo, connect with congo. Copy and paste link in .env file.
+6) Used mongose.connect
