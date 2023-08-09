@@ -43,7 +43,7 @@ const connectDB =async()=>{
 
 connectDB();
 
-app.use("/images",express.static(path.join(__dirname,"public/image")));
+app.use("/image",express.static(path.join(__dirname,"public/image")));
 
 //middleware
 app.use(cors())
@@ -76,10 +76,10 @@ app.use("/conversation",conversationRouter);
 app.use("/message",messageRouter)
 
 
-app.use(express.static(path.join(__dirname, "/social_media")));
+app.use(express.static(path.join(__dirname, "/social_media_Frontend")));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/social_media/build', 'index.html'));
+  res.sendFile(path.join(__dirname, '/social_media_Frontend/build', 'index.html'));
 });
 
 
