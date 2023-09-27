@@ -7,11 +7,17 @@ WORKDIR .
 COPY package*.json ./
 
 # Remove existing node_modules (if any)
+
 RUN rm -rf node_modules
 
 # Install app dependencies
 RUN npm install
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 43da318 (added .gitignore file and .env file)
 # Copy app source code
 COPY . .
 

@@ -17,22 +17,19 @@ var cors = require('cors')
 dotenv.config();
 //const PORT = process.env.PORT || 8000
 
-/*mongoose.connect(process.env.MONGO_URL, {useNewUrlParser : true,useUnifiedTopology: true,useCreateIndex: true,  }, (req,res) =>{
-    console.log("MongoDB connected.")
-})*/
 
 
 
 
-//Youtube link to refer mongo connection....
+
 
 const connectDB =async()=>{
     try{
         /*const con = mongoose.connect(process.env.MONGO_URL,{useNewUrlParser : true,useUnifiedTopology: true})
         console.log("Connected")*/
 
-        const db = "mongodb+srv://Sanyam632000:Snp632000@cluster0.rl9zf.mongodb.net/Users?retryWrites=true&w=majority";
-      mongoose.connect(db).then(() => {
+
+      mongoose.connect(process.env.db).then(() => {
         console.log("Connected to database");
       });
     }catch(err){
