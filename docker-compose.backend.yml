@@ -6,6 +6,6 @@ backend:
       dockerfile: Dockerfile
 
     environment:
-      - MONGODB_URI=mongodb+srv://Sanyam632000:Snp632000@cluster0.rl9zf.mongodb.net/Users?retryWrites=true&w=majority
+      - MONGODB_URI=process.env.db
     ports:
       - "3030:3030"
