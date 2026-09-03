@@ -13,11 +13,6 @@ RUN rm -rf node_modules
 # Install app dependencies
 RUN npm install
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 43da318 (added .gitignore file and .env file)
 # Copy app source code
 COPY . .
 
