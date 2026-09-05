@@ -55,20 +55,14 @@ router.delete('/:id', async(req,res) => {
 //Get All user in database
 router.get('/get_all_users', async(req,res) =>{
     try{
-        User.find({}, function (err, users) {
-          /*  const len = users.length
-            const total_users = new Array(len);
-            for(var i=0;i<len;i++){
-                total_users[i] = users[i].username
-            }
-            res.json(total_users)*/
-                res.json(users)
-        });
+        const users = await User.find({}, '_id username profilePicture');
+        // Send the array directly back to React
+        res.status(200).json(users);
     }
     catch(err){
         res.status(401).json(err)
     }
-})
+});
 
 //Get All user in database
 router.get('/:id/get_suggested_friend', async(req,res) =>{
